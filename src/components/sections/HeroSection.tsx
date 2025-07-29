@@ -12,7 +12,7 @@ const HeroSection = () => {
           alt="Agricultural landscape"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
+        <div className="absolute inset-0 bg-gradient-hero" />
       </div>
 
       {/* Content */}
@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
               Transformons l'Agriculture
-              <span className="block text-primary-light">en Afrique</span>
+              <span className="block text-primary">en Afrique</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
@@ -33,7 +33,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button 
                 size="lg" 
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-strong"
+                className="bg-primary text-primary-foreground hover:bg-primary-dark shadow-strong"
               >
                 Découvrir nos Services
                 <ArrowRight className="ml-2 w-5 h-5" />
