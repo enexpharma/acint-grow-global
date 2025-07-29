@@ -2,18 +2,20 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navigation = [
-    { name: "Accueil", href: "#home" },
-    { name: "À Propos", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Projets", href: "#projects" },
-    { name: "Candidater", href: "#apply" },
-    { name: "Partenaires", href: "#partners" },
-    { name: "Contact", href: "#contact" },
+    { name: "Accueil", href: "/" },
+    { name: "À Propos", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Projets", href: "/projects" },
+    { name: "Candidater", href: "/apply" },
+    { name: "Partenaires", href: "/partners" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -35,13 +37,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                to={item.href}
+                className={cn(
+                  "text-foreground hover:text-primary transition-colors duration-300 font-medium",
+                  location.pathname === item.href && "text-primary"
+                )}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -73,14 +78,17 @@ const Header = () => {
         >
           <nav className="py-4 space-y-2">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-all duration-200"
+                to={item.href}
+                className={cn(
+                  "block px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-all duration-200",
+                  location.pathname === item.href && "text-primary bg-muted"
+                )}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="px-4 pt-4 space-y-2">
               <Button variant="outline" size="sm" className="w-full">
