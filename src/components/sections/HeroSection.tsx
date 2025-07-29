@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div className="animate-fade-in">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
               Transformons l'Agriculture
-              <span className="block text-primary">en Afrique</span>
+              <span className="block bg-gradient-glow bg-clip-text text-transparent animate-pulse">en Afrique</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
@@ -51,8 +51,8 @@ const HeroSection = () => {
 
             {/* Statistics */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl">
-              <div className="flex items-center space-x-3 bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="w-12 h-12 bg-primary-foreground/20 rounded-lg flex items-center justify-center">
+              <div className="flex items-center space-x-3 bg-gradient-card backdrop-blur-sm rounded-lg p-4 hover:shadow-glow transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center animate-pulse">
                   <Users className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
@@ -61,8 +61,8 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3 bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="w-12 h-12 bg-primary-foreground/20 rounded-lg flex items-center justify-center">
+              <div className="flex items-center space-x-3 bg-gradient-card backdrop-blur-sm rounded-lg p-4 hover:shadow-glow transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center animate-pulse">
                   <Sprout className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
@@ -71,8 +71,8 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3 bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-4">
-                <div className="w-12 h-12 bg-primary-foreground/20 rounded-lg flex items-center justify-center">
+              <div className="flex items-center space-x-3 bg-gradient-card backdrop-blur-sm rounded-lg p-4 hover:shadow-glow transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center animate-pulse">
                   <TrendingUp className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
