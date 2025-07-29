@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -22,12 +22,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Leaf className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <img 
+              src="/lovable-uploads/da28dec9-9dd9-484b-b323-8dcf6035b03f.png" 
+              alt="ACINT Logo"
+              className="h-10 w-auto"
+            />
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground">ACINT</span>
-              <span className="text-xs text-muted-foreground">Agricultural Advisory</span>
+              <span className="text-xs text-muted-foreground">Agricultural Advisory & Installation</span>
             </div>
           </div>
 

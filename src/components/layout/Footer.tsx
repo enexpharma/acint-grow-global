@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { 
-  Leaf, 
   MapPin, 
   Phone, 
   Mail, 
@@ -56,12 +55,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-primary-foreground" />
-              </div>
+              <img 
+                src="/lovable-uploads/da28dec9-9dd9-484b-b323-8dcf6035b03f.png" 
+                alt="ACINT Logo"
+                className="h-12 w-auto"
+              />
               <div>
-                <div className="font-bold text-xl">ACINT</div>
-                <div className="text-sm text-background/80">Agricultural Advisory</div>
+                <div className="text-sm text-background/80">Agricultural Advisory & Installation</div>
               </div>
             </div>
             <p className="text-background/80 mb-6 leading-relaxed">
