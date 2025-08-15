@@ -7,8 +7,70 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock, MessageSquare, Users, Headphones } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [calendlyUrl, setCalendlyUrl] = useState("");
+  const [webhookUrl, setWebhookUrl] = useState("");
+
+  const handleCalendlyAppointment = () => {
+    if (calendlyUrl) {
+      window.open(calendlyUrl, '_blank');
+    } else {
+      // Default Calendly example - replace with actual URL
+      window.open('https://calendly.com/your-username/30min', '_blank');
+      toast({
+        title: "Information",
+        description: "Veuillez configurer votre URL Calendly pour une intégration complète.",
+      });
+    }
+  };
+
+  const handleTechnicalSupport = () => {
+    const subject = encodeURIComponent("Demande de Support Technique - ACINT");
+    const body = encodeURIComponent("Bonjour,\n\nJ'ai besoin d'aide concernant:\n\n[Décrivez votre problème ici]\n\nCordialement,");
+    const mailtoUrl = `mailto:support@acint-cif3a.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoUrl;
+  };
+
+  const handleZapierWebhook = async (action: string) => {
+    if (!webhookUrl) {
+      toast({
+        title: "Configuration requise",
+        description: "Veuillez configurer votre webhook Zapier pour cette fonctionnalité.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          action,
+          timestamp: new Date().toISOString(),
+          triggered_from: window.location.origin,
+        }),
+      });
+
+      toast({
+        title: "Requête envoyée",
+        description: "Votre demande a été transmise via Zapier.",
+      });
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Impossible d'envoyer la requête. Vérifiez votre configuration.",
+        variant: "destructive",
+      });
+    }
+  };
   const contactMethods = [
     {
       icon: Phone,
@@ -234,20 +296,61 @@ const Contact = () => {
                   <Card>
                     <CardHeader>
                       <CardTitle className="text-lg">Actions Rapides</CardTitle>
+                      <CardDescription>
+                        Configurez vos intégrations pour une expérience personnalisée
+                      </CardDescription>
                     </CardHeader>
-                    <CardContent className="space-y-3">
-                      <Button variant="outline" className="w-full justify-start">
-                        <Users className="w-4 h-4 mr-2" />
-                        Prendre Rendez-vous
-                      </Button>
-                      <Button variant="outline" className="w-full justify-start">
-                        <Headphones className="w-4 h-4 mr-2" />
-                        Support Technique
-                      </Button>
-                      <Button variant="outline" className="w-full justify-start">
-                        <MessageSquare className="w-4 h-4 mr-2" />
-                        Chat en Direct
-                      </Button>
+                    <CardContent className="space-y-4">
+                      {/* Calendly Configuration */}
+                      <div className="space-y-2">
+                        <Label htmlFor="calendly" className="text-sm font-medium">URL Calendly (optionnel)</Label>
+                        <Input
+                          id="calendly"
+                          placeholder="https://calendly.com/votre-nom/30min"
+                          value={calendlyUrl}
+                          onChange={(e) => setCalendlyUrl(e.target.value)}
+                          className="text-sm"
+                        />
+                      </div>
+
+                      {/* Zapier Webhook Configuration */}
+                      <div className="space-y-2">
+                        <Label htmlFor="webhook" className="text-sm font-medium">Webhook Zapier (optionnel)</Label>
+                        <Input
+                          id="webhook"
+                          placeholder="https://hooks.zapier.com/hooks/catch/..."
+                          value={webhookUrl}
+                          onChange={(e) => setWebhookUrl(e.target.value)}
+                          className="text-sm"
+                        />
+                      </div>
+
+                      <div className="border-t pt-4 space-y-3">
+                        <Button 
+                          variant="outline" 
+                          className="w-full justify-start"
+                          onClick={handleCalendlyAppointment}
+                        >
+                          <Users className="w-4 h-4 mr-2" />
+                          Prendre Rendez-vous
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          className="w-full justify-start"
+                          onClick={handleTechnicalSupport}
+                        >
+                          <Headphones className="w-4 h-4 mr-2" />
+                          Support Technique
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          className="w-full justify-start"
+                          onClick={() => handleZapierWebhook("chat_request")}
+                        >
+                          <MessageSquare className="w-4 h-4 mr-2" />
+                          Chat en Direct
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
