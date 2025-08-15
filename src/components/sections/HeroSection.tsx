@@ -42,7 +42,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground backdrop-blur-sm bg-primary-foreground/10 shadow-strong"
               >
                 <Play className="mr-2 w-5 h-5" />
                 Voir notre Impact
