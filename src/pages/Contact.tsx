@@ -28,7 +28,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Siège Social",
       description: "Visitez nos bureaux",
-      contact: "Abidjan, Côte d'Ivoire",
+      contact: "Bingerville, Abidjan",
       hours: "Lun-Ven: 8h-17h"
     },
     {
@@ -44,34 +44,34 @@ const Contact = () => {
     {
       city: "Abidjan",
       country: "Côte d'Ivoire",
-      address: "Plateau, Abidjan",
+      address: "Bingerville, Abidjan",
       phone: "+225 07 07 01 09 95",
       email: "secretariat@acint-cif3a.com",
       type: "Siège Social"
     },
     {
-      city: "Ouagadougou",
-      country: "Burkina Faso",
-      address: "Avenue de la Nation, Zone 1",
-      phone: "+226 25 123 456",
-      email: "ouaga@acint-cif3a.com",
-      type: "Bureau Régional"
+      city: "Grand Moutcho, Agboville",
+      country: "Côte d'Ivoire",
+      address: "Grand Moutcho, Agboville, Côte d'Ivoire",
+      phone: "+225 07 07 01 09 95",
+      email: "secretariat@acint-cif3a.com",
+      type: "Ferme école"
     },
     {
-      city: "Bamako",
-      country: "Mali",
-      address: "Avenue de l'Indépendance, Commune III",
-      phone: "+223 20 123 456",
-      email: "bamako@acint-cif3a.com",
-      type: "Bureau Régional"
+      city: "Abadjin-Kouté, Songon",
+      country: "Côte d'Ivoire",
+      address: "Abadjin-Kouté,Songon, District d'Abidjan",
+      phone: "+225 07 07 01 09 95",
+      email: "secretariat@acint-cif3a.com",
+      type: "Ferme école"
     },
     {
-      city: "Accra",
-      country: "Ghana",
-      address: "Independence Avenue, Central Accra",
-      phone: "+233 30 123 4567",
-      email: "accra@acint-cif3a.com",
-      type: "Bureau Régional"
+      city: "Boutroklo, Gôh-Djiboua",
+      country: "Côte d'Ivoire",
+      address: "Boutroklo, District du Gôh-Djiboua, Côte d'Ivoire",
+      phone: "+225 07 07 01 09 95",
+      email: "secretariat@acint-cif3a.com",
+      type: "Ferme école"
     }
   ];
 

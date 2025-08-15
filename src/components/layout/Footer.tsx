@@ -127,7 +127,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <span className="text-background/80">
-                  Abidjan, Côte d'Ivoire
+                  Bingerville, Abidjan
                 </span>
               </div>
               <div className="flex items-center space-x-3">
