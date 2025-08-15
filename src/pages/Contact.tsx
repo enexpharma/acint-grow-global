@@ -290,12 +290,11 @@ const Contact = () => {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Offrez-vous des services dans mon pays ?</CardTitle>
+                    <CardTitle className="text-lg">Quel est le niveau d'études requis ?</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Nous sommes présents dans 15 pays africains. Contactez-nous pour vérifier 
-                      la disponibilité de nos services dans votre région.
+                      Nous sommes très attaché à nos valeurs d'inclusions, c'est pourquoi, il n'y a pas de niveau d'étude minimale pour s'incrire, est faire partie de notre programme d'Entreprises Agricoles.
                     </p>
                   </CardContent>
                 </Card>
