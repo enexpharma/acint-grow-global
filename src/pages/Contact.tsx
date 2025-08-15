@@ -14,21 +14,21 @@ const Contact = () => {
       icon: Phone,
       title: "Téléphone",
       description: "Appelez-nous directement",
-      contact: "+221 33 123 45 67",
+      contact: "+225 07 07 01 09 95",
       hours: "Lun-Ven: 8h-18h"
     },
     {
       icon: Mail,
       title: "Email",
       description: "Envoyez-nous un message",
-      contact: "contact@acint.org",
+      contact: "secretariat@acint-cif3a.com",
       hours: "Réponse sous 24h"
     },
     {
       icon: MapPin,
       title: "Siège Social",
       description: "Visitez nos bureaux",
-      contact: "Dakar, Sénégal",
+      contact: "Abidjan, Côte d'Ivoire",
       hours: "Lun-Ven: 8h-17h"
     },
     {
@@ -42,11 +42,11 @@ const Contact = () => {
 
   const offices = [
     {
-      city: "Dakar",
-      country: "Sénégal",
-      address: "Avenue Léopold Sédar Senghor, Plateau",
-      phone: "+221 33 123 45 67",
-      email: "dakar@acint.org",
+      city: "Abidjan",
+      country: "Côte d'Ivoire",
+      address: "Plateau, Abidjan",
+      phone: "+225 07 07 01 09 95",
+      email: "secretariat@acint-cif3a.com",
       type: "Siège Social"
     },
     {
@@ -54,7 +54,7 @@ const Contact = () => {
       country: "Burkina Faso",
       address: "Avenue de la Nation, Zone 1",
       phone: "+226 25 123 456",
-      email: "ouaga@acint.org",
+      email: "ouaga@acint-cif3a.com",
       type: "Bureau Régional"
     },
     {
@@ -62,7 +62,7 @@ const Contact = () => {
       country: "Mali",
       address: "Avenue de l'Indépendance, Commune III",
       phone: "+223 20 123 456",
-      email: "bamako@acint.org",
+      email: "bamako@acint-cif3a.com",
       type: "Bureau Régional"
     },
     {
@@ -70,7 +70,7 @@ const Contact = () => {
       country: "Ghana",
       address: "Independence Avenue, Central Accra",
       phone: "+233 30 123 4567",
-      email: "accra@acint.org",
+      email: "accra@acint-cif3a.com",
       type: "Bureau Régional"
     }
   ];
