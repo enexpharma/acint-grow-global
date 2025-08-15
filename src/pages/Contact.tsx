@@ -19,12 +19,8 @@ const Contact = () => {
     if (calendlyUrl) {
       window.open(calendlyUrl, '_blank');
     } else {
-      // Default Calendly example - replace with actual URL
-      window.open('https://calendly.com/your-username/30min', '_blank');
-      toast({
-        title: "Information",
-        description: "Veuillez configurer votre URL Calendly pour une intégration complète.",
-      });
+      // Default Calendly URL
+      window.open('https://calendly.com/secretariat-acint-cif3a/30min', '_blank');
     }
   };
 
