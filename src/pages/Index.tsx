@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import VideoSection from "@/components/sections/VideoSection";
 import ImpactSection from "@/components/sections/ImpactSection";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
+        <VideoSection />
         <ImpactSection />
         {/* Additional sections will be added here */}
       </main>
