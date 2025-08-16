@@ -112,17 +112,20 @@ const HeroCarousel = () => {
                     alt={image.alt}
                     className="w-full h-full object-cover"
                   />
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-foreground/80 via-foreground/60 to-transparent" />
+                  {/* Strong Gradient Overlay for Better Text Visibility */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/50" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
                   
-                  {/* Image Info Overlay */}
-                  <div className="absolute bottom-8 left-8 right-8 text-primary-foreground z-10">
-                    <Badge variant="outline" className="mb-2 text-primary-foreground border-primary-foreground/50">
-                      {image.title}
-                    </Badge>
-                    <p className="text-sm text-primary-foreground/90 max-w-md">
-                      {image.description}
-                    </p>
+                  {/* Image Info Overlay with Enhanced Visibility */}
+                  <div className="absolute bottom-8 left-8 right-8 z-10">
+                    <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                      <Badge variant="outline" className="mb-2 text-white border-white/70 bg-black/40">
+                        {image.title}
+                      </Badge>
+                      <p className="text-sm text-white/95 max-w-md font-medium">
+                        {image.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
@@ -131,84 +134,91 @@ const HeroCarousel = () => {
         </Carousel>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content with Enhanced Background for Better Readability */}
       <div className="relative z-20 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <Badge variant="outline" className="text-primary-foreground border-primary-foreground/50 mb-4">
-            Centre de Formation CIF-3A
-          </Badge>
-          
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            ACINT
-            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent block">
-              Aquaculture & Innovation
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Formation d'excellence en aquaculture et pisciculture. 
-            Transformez votre passion pour l'aquaculture en expertise professionnelle 
-            avec nos programmes certifiants CIF-3A.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4">
-              Découvrir nos Formations
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8 py-4"
-            >
-              Voir nos Projets
-            </Button>
+          {/* Content Background for Better Text Visibility */}
+          <div className="bg-black/50 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 shadow-2xl">
+            <Badge variant="outline" className="text-white border-white/70 bg-black/40 mb-6 text-sm px-4 py-2">
+              Centre de Formation CIF-3A
+            </Badge>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+              ACINT
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent block mt-2">
+                Aquaculture & Innovation
+              </span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed mb-8 font-medium drop-shadow-lg">
+              Formation d'excellence en aquaculture et pisciculture. 
+              Transformez votre passion pour l'aquaculture en expertise professionnelle 
+              avec nos programmes certifiants CIF-3A.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 shadow-lg">
+                Découvrir nos Formations
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-white/70 text-white hover:bg-white/10 font-semibold px-8 py-4 bg-black/20 backdrop-blur-sm"
+              >
+                Voir nos Projets
+              </Button>
+            </div>
           </div>
         </div>
 
-        {/* Statistics */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
+        {/* Statistics with Enhanced Visibility */}
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="bg-primary-foreground/10 backdrop-blur-md rounded-lg p-6 border border-primary-foreground/20">
-              <Fish className="w-8 h-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-primary-foreground">50+</div>
-              <div className="text-sm text-primary-foreground/80">Projets Aquacoles</div>
+            <div className="bg-black/70 backdrop-blur-md rounded-lg p-6 border border-white/30 shadow-lg">
+              <Fish className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-white">50+</div>
+              <div className="text-sm text-white/90 font-medium">Projets Aquacoles</div>
             </div>
-            <div className="bg-primary-foreground/10 backdrop-blur-md rounded-lg p-6 border border-primary-foreground/20">
-              <Users className="w-8 h-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-primary-foreground">200+</div>
-              <div className="text-sm text-primary-foreground/80">Jeunes Formés</div>
+            <div className="bg-black/70 backdrop-blur-md rounded-lg p-6 border border-white/30 shadow-lg">
+              <Users className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-white">200+</div>
+              <div className="text-sm text-white/90 font-medium">Jeunes Formés</div>
             </div>
-            <div className="bg-primary-foreground/10 backdrop-blur-md rounded-lg p-6 border border-primary-foreground/20">
-              <Award className="w-8 h-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-primary-foreground">75%</div>
-              <div className="text-sm text-primary-foreground/80">Taux de Réussite</div>
+            <div className="bg-black/70 backdrop-blur-md rounded-lg p-6 border border-white/30 shadow-lg">
+              <Award className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+              <div className="text-2xl font-bold text-white">75%</div>
+              <div className="text-sm text-white/90 font-medium">Taux de Réussite</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation Dots */}
+      {/* Navigation Dots with Better Visibility */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="flex space-x-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === current
-                  ? "bg-primary scale-125"
-                  : "bg-primary-foreground/50 hover:bg-primary-foreground/70"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+        <div className="bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+          <div className="flex space-x-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === current
+                    ? "bg-blue-400 scale-125 shadow-lg"
+                    : "bg-white/50 hover:bg-white/70"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 right-8 z-30 text-primary-foreground/60 animate-bounce">
-        <div className="text-sm mb-2">Défiler</div>
-        <div className="w-px h-8 bg-primary-foreground/40 mx-auto"></div>
+      {/* Scroll Indicator with Better Visibility */}
+      <div className="absolute bottom-4 right-8 z-30 animate-bounce">
+        <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
+          <div className="text-sm text-white/90 mb-2 font-medium">Défiler</div>
+          <div className="w-px h-6 bg-white/60 mx-auto"></div>
+        </div>
       </div>
     </section>
   );
