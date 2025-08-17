@@ -107,6 +107,15 @@ const ServicesSection = () => {
                     variant="outline" 
                     size="sm" 
                     className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                    onClick={() => {
+                      const routes = {
+                        "Conseil Agricole": "/services/conseil-agricole",
+                        "Formation CIF-3A": "/services/formation-cif-3a", 
+                        "Création d'Entreprises": "/services/creation-entreprises",
+                        "Recherche & Innovation": "/services/recherche-innovation"
+                      };
+                      window.location.href = routes[service.title as keyof typeof routes];
+                    }}
                   >
                     En savoir plus
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

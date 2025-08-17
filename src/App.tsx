@@ -12,6 +12,10 @@ import Apply from "./pages/Apply";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ConseilAgricole from "./pages/services/ConseilAgricole";
+import FormationCIF3A from "./pages/services/FormationCIF3A";
+import CreationEntreprises from "./pages/services/CreationEntreprises";
+import RechercheInnovation from "./pages/services/RechercheInnovation";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +29,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/conseil-agricole" element={<ConseilAgricole />} />
+          <Route path="/services/formation-cif-3a" element={<FormationCIF3A />} />
+          <Route path="/services/creation-entreprises" element={<CreationEntreprises />} />
+          <Route path="/services/recherche-innovation" element={<RechercheInnovation />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/partners" element={<Partners />} />
