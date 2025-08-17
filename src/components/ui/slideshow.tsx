@@ -12,27 +12,33 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    image: "/lovable-uploads/26f40dcd-59f1-40ef-942f-987015ad7a45.png",
-    title: "Formation Agricole",
-    description: "Programmes de formation innovants pour les jeunes entrepreneurs"
+    image: "/lovable-uploads/2ba741a4-4726-47a5-ac9d-321de0bfc8bc.png",
+    title: "Préparation des Sols",
+    description: "Techniques modernes de préparation et d'amélioration des sols agricoles"
   },
   {
     id: 2,
-    image: "/lovable-uploads/3921ce0c-73b8-4b9b-8046-dacbbaf80667.png",
-    title: "Technologies Modernes",
-    description: "Solutions technologiques adaptées à l'agriculture africaine"
+    image: "/lovable-uploads/a9a0d842-2ae1-4029-a170-e1d71e36fbbc.png",
+    title: "Analyses Scientifiques",
+    description: "Tests et analyses de qualité pour optimiser la production"
   },
   {
     id: 3,
-    image: "/lovable-uploads/3ae6fbc6-5afd-4764-a185-3d36ab5b5bf7.png",
-    title: "Développement Durable",
-    description: "Pratiques agricoles respectueuses de l'environnement"
+    image: "/lovable-uploads/49bd11c2-8970-4ccb-b430-3358e007dd24.png",
+    title: "Contrôle Qualité",
+    description: "Mesures précises et suivi des paramètres de production"
   },
   {
     id: 4,
-    image: "/lovable-uploads/aabdab31-7c02-4683-ae4a-483890abd35b.png",
-    title: "Accompagnement",
-    description: "Soutien complet pour créer des entreprises durables"
+    image: "/lovable-uploads/a5ea6335-5bb3-4ff2-8d93-5766560581de.png",
+    title: "Aquaculture",
+    description: "Systèmes d'élevage aquacole durables et productifs"
+  },
+  {
+    id: 5,
+    image: "/lovable-uploads/20688c2a-4328-4f97-81df-2e687c095bd2.png",
+    title: "Élevage Piscicole",
+    description: "Production de poissons selon les meilleures pratiques"
   }
 ];
 
