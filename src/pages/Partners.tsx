@@ -100,41 +100,28 @@ const Partners = () => {
           </div>
         </section>
 
-        {/* Partners Overview */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
                 Écosystème de Partenaires
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {partnerCategories.map((category, index) => {
-                  const IconComponent = category.icon;
-                  return (
-                    <Card key={index} className="hover:shadow-medium transition-all duration-300">
-                      <CardHeader className="text-center">
-                        <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                          <IconComponent className="w-8 h-8 text-primary-foreground" />
-                        </div>
-                        <CardTitle className="text-lg">{category.title}</CardTitle>
-                        <CardDescription>{category.partners.length} partenaires actifs</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-3">
-                          {category.partners.map((partner, partnerIndex) => (
-                            <div key={partnerIndex} className="text-center">
-                              <div className="font-medium text-sm">{partner.name}</div>
-                              <div className="text-xs text-muted-foreground">{partner.type}</div>
-                              <Badge variant="outline" className="text-xs mt-1">
-                                {partner.status}
-                              </Badge>
-                            </div>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
+              <div className="max-w-4xl mx-auto text-center">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  ACINT est activement engagée dans la création et le maintien de partenariats stratégiques 
+                  avec diverses organisations à travers l'Afrique et au-delà. Nous sommes ouverts à collaborer 
+                  avec des organisations internationales, des ONG, des fondations, des entreprises privées, 
+                  des institutions académiques et des organismes gouvernementaux.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  Notre approche collaborative nous permet de maximiser notre impact et d'atteindre nos objectifs 
+                  de transformation agricole de manière plus efficace. Nous croyons fermement que les partenariats 
+                  durables sont la clé du succès dans le développement agricole durable.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Nous restons actifs dans la recherche de nouveaux partenaires qui partagent notre vision 
+                  d'une agriculture africaine prospère et durable.
+                </p>
               </div>
             </div>
           </div>
