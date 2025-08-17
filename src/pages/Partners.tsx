@@ -228,11 +228,11 @@ const Partners = () => {
                 de l'agriculture africaine. Ensemble, nous pouvons avoir un impact plus grand.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark">
-                  Devenir Partenaire
+                <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark" asChild>
+                  <a href="/contact">Devenir Partenaire</a>
                 </Button>
-                <Button size="lg" variant="outline">
-                  Télécharger la Brochure
+                <Button size="lg" variant="outline" asChild>
+                  <a href="/contact">Télécharger la Brochure</a>
                 </Button>
               </div>
             </div>

@@ -292,11 +292,11 @@ const RechercheInnovation = () => {
               Rejoignez notre écosystème de recherche et développement pour façonner l'avenir agricole
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Proposer un Projet
+              <Button size="lg" variant="secondary" asChild>
+                <a href="/contact">Proposer un Projet</a>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Devenir Partenaire R&D
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+                <a href="/contact">Devenir Partenaire R&D</a>
               </Button>
             </div>
           </div>

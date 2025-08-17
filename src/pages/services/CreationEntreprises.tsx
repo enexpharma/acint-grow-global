@@ -91,7 +91,7 @@ const CreationEntreprises = () => {
       number: "05",
       title: "Accompagnement Continu",
       description: "Suivi et support pour assurer la pérennité de l'entreprise",
-      duration: "12 mois"
+      duration: "Sans limite de durée"
     }
   ];
 
