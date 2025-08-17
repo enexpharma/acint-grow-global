@@ -2,7 +2,7 @@ import { Button } from "./button";
 import whatsappIcon from "@/assets/whatsapp-icon.svg";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "22507070109995";
+  const phoneNumber = "22507010995";
   const message = "Bonjour, j'aimerais obtenir des informations sur";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
