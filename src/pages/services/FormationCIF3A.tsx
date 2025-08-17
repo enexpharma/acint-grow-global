@@ -78,8 +78,8 @@ const FormationCIF3A = () => {
       icon: Globe
     },
     {
-      title: "Certification Reconnue",
-      description: "Diplôme validé par les institutions partenaires",
+      title: "Intégration d'Entreprise Agricole",
+      description: "Intégration d'une entreprise agricole en tant qu'actionnaire à l'issue de la formation qualifiante.",
       icon: Award
     },
     {
