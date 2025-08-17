@@ -30,27 +30,8 @@ const HeroSection = () => {
               des entreprises agricoles durables.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button 
-                size="lg" 
-                className="bg-primary text-primary-foreground hover:bg-primary-dark shadow-strong"
-              >
-                Découvrir nos Services
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground backdrop-blur-sm bg-primary-foreground/10 shadow-strong"
-              >
-                <Play className="mr-2 w-5 h-5" />
-                Voir notre Impact
-              </Button>
-            </div>
-
-            {/* Statistics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl">
+            {/* Statistics moved right below text */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mb-8">
               <div className="flex items-center space-x-3 bg-gradient-card backdrop-blur-sm rounded-lg p-4 hover:shadow-glow transition-all duration-300 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center animate-pulse">
                   <Users className="w-6 h-6 text-primary-foreground" />
@@ -80,6 +61,26 @@ const HeroSection = () => {
                   <div className="text-primary-foreground/80 text-sm">EA Créées</div>
                 </div>
               </div>
+            </div>
+
+            {/* Buttons after statistics for better visibility */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary-dark shadow-strong"
+              >
+                Découvrir nos Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground backdrop-blur-sm bg-primary-foreground/10 shadow-strong"
+              >
+                <Play className="mr-2 w-5 h-5" />
+                Voir nos Projets
+              </Button>
             </div>
           </div>
         </div>
