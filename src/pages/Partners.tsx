@@ -180,9 +180,9 @@ const Partners = () => {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="bg-gradient-card rounded-lg p-8 shadow-medium">
-                  <h3 className="text-xl font-bold mb-4">Partenariat FAO-ACINT</h3>
+                  <h3 className="text-xl font-bold mb-4">Partenariat avec l'agence Emploi Jeunes-ACINT</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Notre collaboration avec la FAO a permis de former plus de 5,000 agriculteurs 
+                    Notre collaboration avec l'agence Emploi Jeunes a permis de former plus de 5,000 agriculteurs 
                     en techniques modernes d'irrigation, résultant en une augmentation moyenne 
                     de 40% des rendements dans 3 pays africains.
                   </p>
@@ -203,9 +203,9 @@ const Partners = () => {
                 </div>
 
                 <div className="bg-gradient-card rounded-lg p-8 shadow-medium">
-                  <h3 className="text-xl font-bold mb-4">Alliance Yara-ACINT</h3>
+                  <h3 className="text-xl font-bold mb-4">Partenariat-Village Abadjin-Kouté</h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
-                    Le partenariat avec Yara International a révolutionné l'accès aux engrais 
+                    Le partenariat avec le Village Abadjin-Kouté a révolutionné l'accès aux engrais 
                     de qualité pour les petits producteurs, avec un programme de crédit adapté 
                     qui a bénéficié à plus de 8,000 familles.
                   </p>
