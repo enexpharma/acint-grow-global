@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import ServicesSection from "@/components/sections/ServicesSection";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const serviceDetails = [
@@ -82,9 +83,11 @@ const Services = () => {
                           </li>
                         ))}
                       </ul>
-                      <Button className="bg-gradient-primary hover:bg-primary-dark">
-                        En Savoir Plus
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                      <Button className="bg-gradient-primary hover:bg-primary-dark" asChild>
+                        <Link to="/contact">
+                          En Savoir Plus
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
                       </Button>
                     </div>
                     <div className={index % 2 === 1 ? "lg:order-1" : ""}>
@@ -113,11 +116,11 @@ const Services = () => {
                 vous aider à atteindre vos objectifs agricoles.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark">
-                  Demander un Devis
+                <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark" asChild>
+                  <Link to="/contact">Demander un Devis</Link>
                 </Button>
-                <Button size="lg" variant="outline">
-                  Programmer une Consultation
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/contact">Programmer une Consultation</Link>
                 </Button>
               </div>
             </div>

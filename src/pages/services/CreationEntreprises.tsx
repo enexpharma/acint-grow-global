@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { Link } from "react-router-dom";
 import { 
   Building2, 
   CheckCircle, 
@@ -274,11 +275,11 @@ const CreationEntreprises = () => {
               Rejoignez nos entrepreneurs à succès et transformez votre passion en business prospère
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary">
-                Démarrer Mon Projet
+              <Button size="lg" variant="secondary" asChild>
+                <Link to="/apply">Démarrer Mon Projet</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Planifier un Rendez-vous
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+                <Link to="/contact">Planifier un Rendez-vous</Link>
               </Button>
             </div>
           </div>

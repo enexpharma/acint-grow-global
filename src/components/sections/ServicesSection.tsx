@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   Lightbulb, 
   GraduationCap, 
@@ -107,18 +108,22 @@ const ServicesSection = () => {
                     variant="outline" 
                     size="sm" 
                     className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                    onClick={() => {
-                      const routes = {
-                        "Conseil Agricole": "/services/conseil-agricole",
-                        "Formation CIF-3A": "/services/formation-cif-3a", 
-                        "Création d'Entreprises": "/services/creation-entreprises",
-                        "Recherche & Innovation": "/services/recherche-innovation"
-                      };
-                      window.location.href = routes[service.title as keyof typeof routes];
-                    }}
+                    asChild
                   >
-                    En savoir plus
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <Link
+                      to={(() => {
+                        const routes = {
+                          "Conseil Agricole": "/services/conseil-agricole",
+                          "Formation CIF-3A": "/services/formation-cif-3a", 
+                          "Création d'Entreprises": "/services/creation-entreprises",
+                          "Recherche & Innovation": "/services/recherche-innovation"
+                        };
+                        return routes[service.title as keyof typeof routes];
+                      })()}
+                    >
+                      En savoir plus
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -127,9 +132,11 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark shadow-medium">
-            Découvrir tous nos services
-            <ArrowRight className="ml-2 w-5 h-5" />
+          <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark shadow-medium" asChild>
+            <Link to="/services">
+              Découvrir tous nos services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </Button>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { Link } from "react-router-dom";
 import { 
   GraduationCap, 
   CheckCircle, 
@@ -253,11 +254,11 @@ const FormationCIF3A = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark">
-                  Postuler Maintenant
+                <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark" asChild>
+                  <Link to="/apply">Postuler Maintenant</Link>
                 </Button>
-                <Button size="lg" variant="outline">
-                  Télécharger la Brochure
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/contact">Télécharger la Brochure</Link>
                 </Button>
               </div>
             </div>

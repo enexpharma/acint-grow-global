@@ -55,8 +55,8 @@ const Header = () => {
             <Button variant="outline" size="sm">
               FR/EN
             </Button>
-            <Button size="sm" className="bg-gradient-primary hover:bg-primary-dark">
-              Nous Contacter
+            <Button size="sm" className="bg-gradient-primary hover:bg-primary-dark" asChild>
+              <Link to="/contact">Nous Contacter</Link>
             </Button>
           </div>
 
@@ -94,8 +94,8 @@ const Header = () => {
               <Button variant="outline" size="sm" className="w-full">
                 FR/EN
               </Button>
-              <Button size="sm" className="w-full bg-gradient-primary">
-                Nous Contacter
+              <Button size="sm" className="w-full bg-gradient-primary" asChild>
+                <Link to="/contact">Nous Contacter</Link>
               </Button>
             </div>
           </nav>

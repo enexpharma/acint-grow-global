@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { Link } from "react-router-dom";
 import { 
   Lightbulb, 
   CheckCircle, 
@@ -195,11 +196,11 @@ const ConseilAgricole = () => {
               Contactez nos experts pour une consultation personnalisée et découvrez comment nous pouvons vous accompagner
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark">
-                Demander une Consultation
+              <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark" asChild>
+                <Link to="/contact">Demander une Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline">
-                Télécharger Notre Brochure
+              <Button size="lg" variant="outline" asChild>
+                <Link to="/contact">Télécharger Notre Brochure</Link>
               </Button>
             </div>
           </div>

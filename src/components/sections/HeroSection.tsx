@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Users, Sprout, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/hero-agriculture.jpg";
 import Slideshow from "@/components/ui/slideshow";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -70,18 +71,24 @@ const HeroSection = () => {
                 <Button 
                   size="lg" 
                   className="bg-primary text-primary-foreground hover:bg-primary-dark shadow-strong"
+                  asChild
                 >
-                  Découvrir nos Services
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <Link to="/services">
+                    Découvrir nos Services
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
                 </Button>
                 
                 <Button 
                   size="lg" 
                   variant="outline" 
                   className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground backdrop-blur-sm bg-primary-foreground/10 shadow-strong"
+                  asChild
                 >
-                  <Play className="mr-2 w-5 h-5" />
-                  Voir nos Projets
+                  <Link to="/projects">
+                    <Play className="mr-2 w-5 h-5" />
+                    Voir nos Projets
+                  </Link>
                 </Button>
               </div>
             </div>
