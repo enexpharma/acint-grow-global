@@ -47,15 +47,15 @@ const ImpactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <Badge variant="outline" className="mb-4 text-primary border-primary">
-            Notre Impact Réel
+            Notre Présence
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            L'Aquaculture en Action
+            Présence sur tout le territoire ivoirien
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Découvrez comment ACINT transforme la vie des jeunes entrepreneurs à travers 
-            des formations pratiques en aquaculture et pisciculture. Nos projets concrets 
-            génèrent des revenus durables et renforcent la sécurité alimentaire.
+            ACINT est présent dans toutes les régions de Côte d'Ivoire pour accompagner 
+            les jeunes entrepreneurs agricoles. Notre réseau national garantit un accès 
+            équitable aux formations et services d'accompagnement partout sur le territoire.
           </p>
         </div>
 
