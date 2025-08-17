@@ -11,40 +11,40 @@ const Partners = () => {
       title: "Organisations Internationales",
       icon: Globe,
       partners: [
-        { name: "FAO", type: "Organisation des Nations Unies", status: "Actif" },
-        { name: "Banque Mondiale", type: "Institution Financière", status: "Actif" },
-        { name: "USAID", type: "Agence de Développement", status: "Actif" },
-        { name: "Union Européenne", type: "Institution Européenne", status: "Actif" }
+        { name: "Organisation Partenaire 1", type: "Organisation des Nations Unies", status: "Actif" },
+        { name: "Organisation Partenaire 2", type: "Institution Financière", status: "Actif" },
+        { name: "Organisation Partenaire 3", type: "Agence de Développement", status: "Actif" },
+        { name: "Organisation Partenaire 4", type: "Institution Européenne", status: "Actif" }
       ]
     },
     {
       title: "ONG et Fondations",
       icon: HandHeart,
       partners: [
-        { name: "Oxfam", type: "ONG Internationale", status: "Actif" },
-        { name: "Gates Foundation", type: "Fondation Privée", status: "Actif" },
-        { name: "ACDI/VOCA", type: "ONG Développement", status: "Actif" },
-        { name: "Heifer International", type: "ONG Agriculture", status: "Actif" }
+        { name: "ONG Partenaire 1", type: "ONG Internationale", status: "Actif" },
+        { name: "Fondation Partenaire 1", type: "Fondation Privée", status: "Actif" },
+        { name: "ONG Partenaire 2", type: "ONG Développement", status: "Actif" },
+        { name: "ONG Partenaire 3", type: "ONG Agriculture", status: "Actif" }
       ]
     },
     {
       title: "Entreprises Privées",
       icon: Building,
       partners: [
-        { name: "Yara International", type: "Engrais et Nutrition", status: "Actif" },
-        { name: "John Deere", type: "Équipement Agricole", status: "Actif" },
-        { name: "Nestlé", type: "Industrie Alimentaire", status: "Actif" },
-        { name: "Olam Group", type: "Chaîne d'Approvisionnement", status: "Actif" }
+        { name: "Entreprise Partenaire 1", type: "Engrais et Nutrition", status: "Actif" },
+        { name: "Entreprise Partenaire 2", type: "Équipement Agricole", status: "Actif" },
+        { name: "Entreprise Partenaire 3", type: "Industrie Alimentaire", status: "Actif" },
+        { name: "Entreprise Partenaire 4", type: "Chaîne d'Approvisionnement", status: "Actif" }
       ]
     },
     {
       title: "Institutions Académiques",
       icon: Award,
       partners: [
-        { name: "Université Cheikh Anta Diop", type: "Université", status: "Actif" },
-        { name: "ICRISAT", type: "Institut de Recherche", status: "Actif" },
-        { name: "CIRAD", type: "Recherche Agricole", status: "Actif" },
-        { name: "Institut Pasteur", type: "Recherche Scientifique", status: "Actif" }
+        { name: "Université Partenaire 1", type: "Université", status: "Actif" },
+        { name: "Institut Partenaire 1", type: "Institut de Recherche", status: "Actif" },
+        { name: "Institut Partenaire 2", type: "Recherche Agricole", status: "Actif" },
+        { name: "Institut Partenaire 3", type: "Recherche Scientifique", status: "Actif" }
       ]
     }
   ];
