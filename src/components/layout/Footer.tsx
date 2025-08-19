@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 import { 
   MapPin, 
   Phone, 
@@ -12,17 +13,17 @@ import {
 
 const Footer = () => {
   const quickLinks = [
-    { name: "À Propos", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Projets", href: "#projects" },
-    { name: "Candidater", href: "#apply" },
+    { name: "À Propos", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Projets", href: "/projects" },
+    { name: "Candidater", href: "/apply" },
   ];
 
   const services = [
-    { name: "Conseil Agricole", href: "#services" },
-    { name: "Formation CIF-3A", href: "#services" },
-    { name: "Création EA", href: "#services" },
-    { name: "R&D Innovation", href: "#services" },
+    { name: "Conseil Agricole", href: "/services/conseil-agricole" },
+    { name: "Formation CIF-3A", href: "/services/formation-cif3a" },
+    { name: "Création EA", href: "/services/creation-entreprises" },
+    { name: "R&D Innovation", href: "/services/recherche-innovation" },
   ];
 
   return (
@@ -92,12 +93,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.href} 
                     className="text-background/80 hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -109,12 +110,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
-                  <a 
-                    href={service.href} 
+                  <Link 
+                    to={service.href} 
                     className="text-background/80 hover:text-primary transition-colors"
                   >
                     {service.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -152,12 +153,12 @@ const Footer = () => {
             © 2024 ACINT. Tous droits réservés.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">
+            <Link to="/contact" className="text-background/60 hover:text-primary text-sm transition-colors">
               Politique de confidentialité
-            </a>
-            <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">
+            </Link>
+            <Link to="/contact" className="text-background/60 hover:text-primary text-sm transition-colors">
               Conditions d'utilisation
-            </a>
+            </Link>
           </div>
         </div>
       </div>
